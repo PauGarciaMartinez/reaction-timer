@@ -3,8 +3,8 @@
   <h2>Are you fast enough?</h2>
   <button @click="start" :disabled="isPlaying">Play</button>
 
-  <Block v-if="delay" :delay="delay"/>
-  <Results />
+  <Block v-if="delay" :delay="delay" @end="endGame" />
+  <Results :score="score" />
 </template>
 
 <script>
@@ -16,13 +16,18 @@ export default {
   data() {
     return {
       isPlaying: false,
-      delay: null
+      delay: null,
+      score: null
     }
   },
   methods: {
     start() {
       this.delay = 2000 + Math.random() * 5000;
       this.isPlaying = true;
+    },
+    endGame(reactionTime) {
+      this.score = reactionTime;
+      this.isPlaying = false;
     }
   },
   components: {
