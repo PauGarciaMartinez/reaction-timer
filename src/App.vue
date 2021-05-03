@@ -3,7 +3,7 @@
   <h2>Are you fast enough?</h2>
   <button @click="start" :disabled="isPlaying">Play</button>
 
-  <Block v-if="delay" :delay="delay" @end="endGame" />
+  <Block v-if="isPlaying" :delay="delay" @end="endGame" />
   <Results v-if="showResults" :score="score" />
 </template>
 
