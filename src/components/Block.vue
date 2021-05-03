@@ -19,7 +19,8 @@ export default {
     startTimer() {
       this.startTimer = setInterval(() => {
         this.reactionTime += 10;
-      }, 10)
+      }, 10);
+
     },
     stopTimer() {
       clearInterval(this.timer);

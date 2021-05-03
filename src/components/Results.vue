@@ -1,12 +1,13 @@
 <!-- TEMPLATE -->
 <template>
-  
+  <p>Your score is {{ score }}ms</p>
 </template>
 
 <!-- SCRIPT -->
 <script>
 export default {
-    name: 'Results'
+    name: 'Results',
+    props: ['score']
 }
 </script>
 
