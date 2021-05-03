@@ -3,12 +3,14 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Block from './components/Block.vue';
+import Results from './components/Results.vue';
 
 export default {
   name: 'App',
   components: {
-    
+    Block,
+    Results
   }
 }
 </script>
