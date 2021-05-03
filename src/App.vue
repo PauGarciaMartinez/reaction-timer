@@ -1,5 +1,8 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <h1>Reaction Timer</h1>
+  <h2>Are you fast enough?</h2>
+  <button @click="start">Play</button>
+
 </template>
 
 <script>
@@ -8,10 +11,23 @@ import Results from './components/Results.vue';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      isPlaying: false,
+      delay: null
+    }
+  },
+  methods: {
+    start() {
+      this.delay = 2000 + Math.random() * 5000;
+      this.isPlaying = true;
+    }
+  },
   components: {
     Block,
     Results
-  }
+  },
+
 }
 </script>
 
@@ -21,7 +37,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #444;
   margin-top: 60px;
 }
 </style>
