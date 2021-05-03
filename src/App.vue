@@ -1,7 +1,7 @@
 <template>
   <h1>Reaction Timer</h1>
   <h2>Are you fast enough?</h2>
-  <button @click="start">Play</button>
+  <button @click="start" :disabled="isPlaying">Play</button>
 
   <Block v-if="delay" :delay="delay"/>
 </template>
@@ -28,7 +28,6 @@ export default {
     Block,
     Results
   },
-
 }
 </script>
 
