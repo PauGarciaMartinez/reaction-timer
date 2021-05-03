@@ -3,6 +3,7 @@
   <h2>Are you fast enough?</h2>
   <button @click="start">Play</button>
 
+  <Block v-if="delay" :delay="delay"/>
 </template>
 
 <script>
