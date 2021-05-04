@@ -1,3 +1,4 @@
+<!-- TEMPLATE -->
 <template>
   <h1>Reaction Timer</h1>
   <h2>Are you fast enough?</h2>
@@ -7,6 +8,7 @@
   <Results v-if="showResults" :score="score" />
 </template>
 
+<!-- SCRIPT -->
 <script>
 import Block from './components/Block.vue';
 import Results from './components/Results.vue';
@@ -40,6 +42,7 @@ export default {
 }
 </script>
 
+<!-- STYLE -->
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
